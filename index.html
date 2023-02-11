@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_HW_10</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="content"></div>
+    <script src="data.js"></script>
+    <script>
+        const contentEl = document.querySelector('.content');
+        const dataContent = JSON.parse(dataInfo);
+        console.log(dataContent);
+        dataContent.forEach((element) => {
+            const generalEl = document.createElement('div');
+            generalEl.classList.add('general');
+
+            const setup = document.createElement('h3');
+            setup.classList.add('setup__joke');
+            setup.textContent = element.setup;
+
+            const punchline = document.createElement('h2');
+            punchline.classList.add('punchline');
+            punchline.textContent = element.punchline;
+
+            const id = document.createElement('p');
+            id.classList.add('id');
+            id.textContent = element.id;
+
+            contentEl.appendChild(generalEl);
+            generalEl.appendChild(setup);
+            generalEl.appendChild(punchline);
+            generalEl.appendChild(id);
+        });
+    </script>
+</body>
+
+</html>
