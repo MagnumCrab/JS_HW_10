@@ -1,0 +1,28 @@
+.content {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  
+  .general {
+    border: 1px solid;
+    padding: 16px;
+    width: 250px;
+  }
+  
+  .setup__joke {
+    text-align: center;
+    text-align: justify;
+    color: rgb(59, 207, 33);
+  }
+
+  .punchline {
+    text-align: center;
+    text-align: justify;
+    color: rgb(209, 29, 32);
+  }
+
+  .id {
+    text-align: right;
+  }
